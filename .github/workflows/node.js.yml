@@ -33,7 +33,7 @@ jobs:
       run: corepack enable
     # - name: Install npm 11.5.1
     #   run: npm install -g npm@11.5.1
-    - run: npm --version
+    # - run: npm --version
     - run: yarn install --immutable
       env:
         YARN_ENABLE_SCRIPTS: false
