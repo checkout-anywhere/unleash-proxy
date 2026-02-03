@@ -1,4 +1,4 @@
-FROM node:20-alpine as builder
+FROM node:20-alpine AS builder
 
 WORKDIR /unleash-proxy
 
@@ -16,13 +16,13 @@ RUN yarn workspaces focus -A --production
 
 FROM node:20-alpine
 
-# Upgrade (addresses OpenSSL CVE-2023-6237 && CVE-2024-2511)
+# Upgrade (addresses CVE-2025-60876 and GHSA-vghf-hv5q-vc2g)
 RUN apk update && \
     apk upgrade && \
-    apk add tini && \
+    apk add busybox busybox-binsh ssl_client && \
     rm -rf /var/cache/apk/*
 
-ENV NODE_ENV production
+ENV NODE_ENV=production
 
 WORKDIR /unleash-proxy
 
@@ -38,4 +38,4 @@ EXPOSE 3000
 
 USER node
 
-CMD ./server.sh
+CMD ["./server.sh"]
