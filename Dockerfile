@@ -14,7 +14,9 @@ RUN yarn build
 
 RUN yarn workspaces focus -A --production
 
+##### Prod Image
 FROM node:20-alpine
+RUN apk add --no-cache tini
 
 # Upgrade (addresses CVE-2025-60876 and GHSA-vghf-hv5q-vc2g)
 RUN apk update && \
