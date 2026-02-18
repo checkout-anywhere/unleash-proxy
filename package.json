@@ -76,7 +76,8 @@
     "qs": "^6.9.7",
     "json5": "^2.2.2",
     "cookiejar": "^2.1.4",
-    "router/path-to-regexp": "0.1.12"
+    "router/path-to-regexp": "0.1.12",
+    "js-yaml": "^4.1.1"
   },
   "packageManager": "yarn@4.12.0"
 }
