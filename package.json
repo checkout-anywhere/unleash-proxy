@@ -11,7 +11,6 @@
     "test": "jest",
     "updateSnapshots": "jest -u",
     "prepare": "npm run build",
-    "dev": "ENABLE_OAS=true ts-node-dev src/start.ts",
     "fmt": "biome check ./src --write",
     "fmt:check": "biome check ./src",
     "biome:ci": "biome ci ./src"
@@ -66,7 +65,6 @@
     "semver": "^7.7.4",
     "supertest": "^7.2.2",
     "ts-jest": "^29.4.6",
-    "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
   },
   "resolutions": {
@@ -79,7 +77,8 @@
     "router/path-to-regexp": "0.1.12",
     "js-yaml": "^4.1.1",
     "tar": "^7.5.9",
-    "minimatch": "^10.2.2"
+    "minimatch": "^10.2.2",
+    "glob": "^13.0.0"
   },
   "packageManager": "yarn@4.12.0"
 }
