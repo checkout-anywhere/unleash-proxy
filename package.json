@@ -71,14 +71,14 @@
     "cookie": "^1.0.0",
     "wrap-ansi": "7.0.0",
     "string-width": "4.1.0",
-    "qs": "^6.9.7",
     "json5": "^2.2.2",
     "cookiejar": "^2.1.4",
     "router/path-to-regexp": "0.1.12",
     "js-yaml": "^4.1.1",
     "tar": "^7.5.10",
     "minimatch": "^10.2.3",
-    "glob": "^13.0.0"
+    "glob": "^13.0.0",
+    "jest-util/picomatch": "4.0.4"
   },
   "packageManager": "yarn@4.12.0"
 }
