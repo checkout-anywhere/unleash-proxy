@@ -78,7 +78,10 @@
     "tar": "^7.5.10",
     "minimatch": "^10.2.3",
     "glob": "^13.0.0",
-    "jest-util/picomatch": "4.0.4"
+    "jest-util/picomatch": "4.0.4",
+    "micromatch/picomatch": "2.3.2",
+    "anymatch/picomatch": "2.3.2",
+    "yaml": "^2.8.3"
   },
   "packageManager": "yarn@4.12.0"
 }
