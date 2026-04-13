@@ -18,10 +18,10 @@ RUN yarn workspaces focus -A --production
 FROM node:20-alpine
 RUN apk add --no-cache tini
 
-# Upgrade (addresses CVE-2025-60876, GHSA-vghf-hv5q-vc2g and CVE-2026-2673)
+# Upgrade (addresses CVE-2025-60876, GHSA-vghf-hv5q-vc2g, CVE-2026-2673 and CVE-2026-40200)
 RUN apk update && \
     apk upgrade && \
-    apk add busybox busybox-binsh ssl_client openssl && \
+    apk add busybox busybox-binsh ssl_client openssl musl musl-utils && \
     rm -rf /var/cache/apk/*
 
 ENV NODE_ENV=production
